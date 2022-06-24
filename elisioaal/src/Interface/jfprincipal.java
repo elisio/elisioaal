@@ -10,6 +10,8 @@ package Interface;
  */
 public class jfprincipal extends javax.swing.JFrame {
 
+        public static boolean cadastro, cadastro1;
+        
     /**
      * Creates new form jfprincipal
      */
@@ -56,9 +58,19 @@ public class jfprincipal extends javax.swing.JFrame {
         jmcadastro.setText("Cadastro");
 
         jmcandidato.setText("Candidato");
+        jmcandidato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmcandidatoActionPerformed(evt);
+            }
+        });
         jmcadastro.add(jmcandidato);
 
         jmeleitor.setText("Eleitor");
+        jmeleitor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmeleitorActionPerformed(evt);
+            }
+        });
         jmcadastro.add(jmeleitor);
 
         jMenuBar1.add(jmcadastro);
@@ -88,7 +100,26 @@ public class jfprincipal extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         this.setExtendedState(MAXIMIZED_BOTH);
+        jfprincipal.cadastro = false;
     }//GEN-LAST:event_formWindowOpened
+
+    private void jmcandidatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmcandidatoActionPerformed
+        
+        if(cadastro == false){
+        jifcandidato obj = new jifcandidato();
+        jdpprincipal.add(obj);
+        obj.setVisible(true);
+        }//fim do if
+    }//GEN-LAST:event_jmcandidatoActionPerformed
+
+    private void jmeleitorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmeleitorActionPerformed
+        
+        if(cadastro1 == false){
+        jifeleitor obj = new jifeleitor();
+        jdpprincipal.add(obj);
+        obj.setVisible(true);
+        }//fim do if
+    }//GEN-LAST:event_jmeleitorActionPerformed
 
     /**
      * @param args the command line arguments

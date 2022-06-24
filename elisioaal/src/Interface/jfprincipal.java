@@ -35,6 +35,7 @@ public class jfprincipal extends javax.swing.JFrame {
         jmeleitor = new javax.swing.JMenuItem();
         jmvotos = new javax.swing.JMenu();
         jmconsulta = new javax.swing.JMenuItem();
+        jmlista = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("elisioaal");
@@ -76,9 +77,27 @@ public class jfprincipal extends javax.swing.JFrame {
         jMenuBar1.add(jmcadastro);
 
         jmvotos.setText("Votos");
+        jmvotos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmvotosActionPerformed(evt);
+            }
+        });
 
         jmconsulta.setText("Consulta");
+        jmconsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmconsultaActionPerformed(evt);
+            }
+        });
         jmvotos.add(jmconsulta);
+
+        jmlista.setText("Lista");
+        jmlista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmlistaActionPerformed(evt);
+            }
+        });
+        jmvotos.add(jmlista);
 
         jMenuBar1.add(jmvotos);
 
@@ -120,6 +139,30 @@ public class jfprincipal extends javax.swing.JFrame {
         obj.setVisible(true);
         }//fim do if
     }//GEN-LAST:event_jmeleitorActionPerformed
+
+    private void jmconsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmconsultaActionPerformed
+        
+        jifconsulta obj = new jifconsulta();
+        jdpprincipal.add(obj);
+        obj.setVisible(true);
+        
+        
+    }//GEN-LAST:event_jmconsultaActionPerformed
+
+    private void jmvotosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmvotosActionPerformed
+        
+        
+        
+    }//GEN-LAST:event_jmvotosActionPerformed
+
+    private void jmlistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmlistaActionPerformed
+        
+        if(cadastro == false){
+        jiflistagem obj = new jiflistagem();
+        jdpprincipal.add(obj);
+        obj.setVisible(true);
+        }//fim do if
+    }//GEN-LAST:event_jmlistaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,6 +206,7 @@ public class jfprincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmcandidato;
     private javax.swing.JMenuItem jmconsulta;
     private javax.swing.JMenuItem jmeleitor;
+    private javax.swing.JMenuItem jmlista;
     private javax.swing.JMenu jmvotos;
     // End of variables declaration//GEN-END:variables
 }

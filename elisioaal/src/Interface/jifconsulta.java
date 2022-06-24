@@ -41,7 +41,6 @@ public class jifconsulta extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
         jbsair = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jbsair1 = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -77,10 +76,13 @@ public class jifconsulta extends javax.swing.JInternalFrame {
         jButton1.setText("Imprimir");
 
         jbsair.setText("Sair");
+        jbsair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbsairActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Imprimir");
-
-        jbsair1.setText("Sair");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -121,8 +123,7 @@ public class jifconsulta extends javax.swing.JInternalFrame {
                                         .addComponent(jbcap1)
                                         .addGap(18, 18, 18)
                                         .addComponent(jButton3)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jbsair1))))))
+                                        .addGap(90, 90, 90))))))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -134,30 +135,35 @@ public class jifconsulta extends javax.swing.JInternalFrame {
                     .addComponent(jLabel1)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jctipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtarg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbcap)
-                    .addComponent(jButton1)
-                    .addComponent(jbsair))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jctipo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtarg1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbcap1)
-                    .addComponent(jButton3)
-                    .addComponent(jbsair1))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jctipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtarg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbcap)
+                            .addComponent(jButton1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jctipo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtarg1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbcap1)
+                            .addComponent(jButton3)))
+                    .addComponent(jbsair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        setBounds(30, 10, 945, 468);
+        setBounds(500, 300, 945, 468);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbsairActionPerformed
+        dispose();
+    }//GEN-LAST:event_jbsairActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -171,7 +177,6 @@ public class jifconsulta extends javax.swing.JInternalFrame {
     private javax.swing.JButton jbcap;
     private javax.swing.JButton jbcap1;
     private javax.swing.JButton jbsair;
-    private javax.swing.JButton jbsair1;
     private javax.swing.JComboBox<String> jctipo;
     private javax.swing.JComboBox<String> jctipo1;
     private javax.swing.JTextField jtarg;
